@@ -98,6 +98,7 @@ img{display:block}
 .draw .bodytxt{font-family:var(--f-display);font-weight:700;font-size:78px;letter-spacing:.16em;fill:#59626b}
 .draw .lab{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;fill:#8C959D}
 .draw .wh{transform-box:fill-box}
+.pan-hint{display:none}
 @keyframes drawIn{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .pin{position:absolute;z-index:3;left:var(--x);top:var(--y);width:44px;height:44px;margin:-22px 0 0 -22px;border:0;background:none;cursor:pointer;padding:0}
 .pin .dot{position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;background:var(--red);border:2.5px solid #fff;border-radius:50%;transition:transform .2s}
@@ -298,9 +299,13 @@ html.js .rv.in{opacity:1;transform:none}
   .stage{margin:20px calc(var(--gutter) * -1) 0}
   .stage-in{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .stage-in::-webkit-scrollbar{display:none}
-  .fig{width:190%}
+  .fig{width:165%}
+  .pan-hint{display:flex;justify-content:flex-end;gap:8px;padding:8px var(--gutter) 0;color:var(--steel)}
+  .pan-hint span{display:inline-block;color:var(--red);animation:nudge 1.4s ease-in-out infinite}
+  @keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
   .legend{padding:10px var(--gutter) 28px}
   .legend-note{color:var(--steel)}
+  .legend button{min-height:44px;padding:0 14px}
   .req-grid,.about-grid,.adv-grid{grid-template-columns:1fr}
   .adv-ph{min-height:300px;order:2}
   .about-ph{aspect-ratio:16/10}
@@ -452,6 +457,7 @@ html.js .rv.in{opacity:1;transform:none}
         <button class="pin" type="button" data-cat="transmission" style="--x:24.1%;--y:55.4%;--pd:1.6s" aria-label="Трансмиссия и сцепление"><span class="dot"></span><span class="lbl">Трансмиссия</span></button>
         <button class="pin" type="button" data-cat="filters" style="--x:40.2%;--y:68.1%;--pd:2s" aria-label="Фильтры и расходные материалы"><span class="dot"></span><span class="lbl">Фильтры</span></button>
       </div></div>
+      <p class="pan-hint mono">Листайте схему <span aria-hidden="true">→</span></p>
       <div class="legend" id="legend">
         <span class="legend-note mono">Нажмите на узел, чтобы открыть категорию</span>
         <button type="button" data-cat="engine">Двигатель</button>
