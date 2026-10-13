@@ -410,6 +410,9 @@ html.js .rv.in{opacity:1;transform:none}
   .final .acts,.final .acts .btn,.cat-foot .btn,.form-act .btn,.dock .btn{width:100%}
   .sec-head{margin-bottom:28px}
   .wm small{display:none}
+  .foot ul a{display:inline-block;padding:11px 0}
+  .ct a{padding:9px 0}
+  .soc a{display:inline-flex;align-items:center;min-height:44px}
   .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(10,10,10,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .35s var(--ease)}
   .mbar.show{transform:none}
   .mbar .btn{min-height:48px;padding:0 10px;font-size:14px}
@@ -930,10 +933,11 @@ html.js .rv.in{opacity:1;transform:none}
       if(reduce||(r.top<h*.92&&r.bottom>0))el.classList.add('in');
     });
   }
-  var rvTick=false;
-  addEventListener('scroll',function(){if(!rvTick){rvTick=true;requestAnimationFrame(function(){rvTick=false;revealCheck()})}},{passive:true});
+  addEventListener('scroll',revealCheck,{passive:true});
   addEventListener('resize',revealCheck);
-  revealCheck();setTimeout(revealCheck,400);
+  revealCheck();
+  /* safety net for environments that do not dispatch scroll events */
+  var rvIv=setInterval(function(){revealCheck();if(!document.querySelector('.rv:not(.in)'))clearInterval(rvIv)},350);
 
   /* Hero pins, legend, catalogue */
   function flash(id){
