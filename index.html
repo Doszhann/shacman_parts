@@ -363,6 +363,28 @@ select.inp{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.
 @media (max-width:1100px){.svc-grid{grid-template-columns:1fr 1fr}.svc-accent{grid-column:1/-1;min-height:300px}}
 @media (max-width:640px){.svc-grid{grid-template-columns:1fr}.svc{min-height:320px}}
 
+/* i18n-css:start */
+.lang{display:inline-flex;border:1px solid var(--line)}
+.lang button{border:0;background:transparent;color:#cfcbc0;padding:0 11px;min-height:44px;min-width:46px;font:500 12px/1 var(--f-mono);letter-spacing:.06em;cursor:pointer;transition:background .2s,color .2s}
+.lang button+button{border-left:1px solid var(--line)}
+.lang button:hover{color:#fff}
+.lang button[aria-pressed=true]{background:var(--accent);color:var(--on-accent)}
+.nav a.l,.wm small{white-space:nowrap}
+html[lang=kk] .hero h1{font-size:clamp(2rem,3.5vw,3.5rem);line-height:1.06}
+html[lang=en] .hero h1{font-size:clamp(2.2rem,4.2vw,4.1rem)}
+@media (max-width:1400px){.nav{gap:20px}}
+@media (max-width:1200px){.nav{gap:16px}.nav a.l{font-size:13px}}
+@media (max-width:1100px){
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(10,10,10,.98);border-bottom:1px solid var(--line);padding:8px var(--gutter) 24px}
+  .nav.open{display:flex}
+  .nav a.l{padding:16px 0;border-bottom:1px solid var(--line);font-size:17px}
+  .nav .btn{margin-top:18px;min-height:52px}
+  .burger{display:inline-flex}
+}
+.nav .lang{margin:0}
+.req-list b{width:auto;min-width:56px;white-space:nowrap}
+@media (max-width:1100px){.nav .lang{align-self:flex-start;margin-top:18px}.nav .lang+.btn{margin-top:14px}}
+/* i18n-css:end */
 /* Reveal */
 html.js .rv{opacity:.35;transform:translateY(22px);transition:opacity .7s ease,transform .7s var(--ease);transition-delay:var(--d,0s)}
 html.js .rv.in{opacity:1;transform:none}
@@ -439,6 +461,11 @@ html.js .rv.in{opacity:1;transform:none}
       <a class="l" href="#advantages">Преимущества</a>
       <a class="l" href="#about">О компании</a>
       <a class="l" href="#contacts">Контакты</a>
+      <div class="lang" role="group" aria-label="Язык / Language">
+        <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+        <button type="button" data-lang="kk" aria-pressed="false">ҚАЗ</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
       <a class="btn btn-red" href="#request">Оставить заявку</a>
     </nav>
     <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
@@ -459,7 +486,7 @@ html.js .rv.in{opacity:1;transform:none}
       <div class="hero-cta">
         <a class="btn btn-red" href="#request">Подобрать запчасть
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-line" href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">Связаться с менеджером</a>
+        <a class="btn btn-line" href="https://wa.me/77756774020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">Связаться с менеджером</a>
       </div>
     </div>
 
@@ -663,7 +690,7 @@ html.js .rv.in{opacity:1;transform:none}
         <div class="svc-body">
           <h3>Ремонт двигателей</h3>
           <p>Ремонт двигателей спецтехники и грузовых автомобилей.</p>
-          <a class="go" href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8F." target="_blank" rel="noopener">Уточнить в WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          <a class="go" href="https://wa.me/77756774020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8F." target="_blank" rel="noopener">Уточнить в WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
         </div>
       </article>
       <article class="svc rv" style="--d:.08s">
@@ -671,7 +698,7 @@ html.js .rv.in{opacity:1;transform:none}
         <div class="svc-body">
           <h3>Ремонт ходовой части</h3>
           <p>Ремонт ходовой части спецтехники и грузовиков.</p>
-          <a class="go" href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D1%85%D0%BE%D0%B4%D0%BE%D0%B2%D0%BE%D0%B9%20%D1%87%D0%B0%D1%81%D1%82%D0%B8." target="_blank" rel="noopener">Уточнить в WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          <a class="go" href="https://wa.me/77756774020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D1%85%D0%BE%D0%B4%D0%BE%D0%B2%D0%BE%D0%B9%20%D1%87%D0%B0%D1%81%D1%82%D0%B8." target="_blank" rel="noopener">Уточнить в WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
         </div>
       </article>
       <article class="svc svc-accent rv" style="--d:.16s">
@@ -679,7 +706,7 @@ html.js .rv.in{opacity:1;transform:none}
         <div class="svc-body">
           <h3>Ремонт любой сложности</h3>
           <p>Беремся за ремонт любой сложности: от небольших неисправностей до серьёзных поломок.</p>
-          <a class="go" href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D1%81%D0%BF%D0%B5%D1%86%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8." target="_blank" rel="noopener">Обсудить ремонт <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          <a class="go" href="https://wa.me/77756774020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D1%81%D0%BF%D0%B5%D1%86%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8." target="_blank" rel="noopener">Обсудить ремонт <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
         </div>
       </article>
     </div>
@@ -824,7 +851,7 @@ html.js .rv.in{opacity:1;transform:none}
     <div class="acts rv" style="--d:.1s">
       <a class="btn btn-white" href="#request">Оставить заявку
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-out-w" href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">Связаться с нами</a>
+      <a class="btn btn-out-w" href="https://wa.me/77756774020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">Связаться с нами</a>
     </div>
   </div>
 </section>
@@ -840,7 +867,7 @@ html.js .rv.in{opacity:1;transform:none}
           <span><b>Shacman</b> <i>Parts</i></span>
         </a>
         <p class="about-s">ТОО «ErDos Trans Service». Запчасти для китайской спецтехники и услуги по ремонту. Работаем с 2017 года.</p>
-        <div class="soc"><a href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/zapchast_chacman/" target="_blank" rel="noopener">Instagram @zapchast_chacman</a></div>
+        <div class="soc"><a href="https://wa.me/77756774020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/zapchast_chacman/" target="_blank" rel="noopener">Instagram @zapchast_chacman</a></div>
       </div>
       <div>
         <h4>Разделы</h4>
@@ -855,8 +882,8 @@ html.js .rv.in{opacity:1;transform:none}
       <div>
         <h4>Контакты</h4>
         <ul class="ct">
-          <li><span>Телефон</span><a href="tel:+77756674020">+7 775 667 40 20</a></li>
-          <li><span>WhatsApp</span><a href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">+7 775 667 40 20</a></li>
+          <li><span>Телефон</span><a href="tel:+77756774020">+7 775 677 40 20</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/77756774020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">+7 775 677 40 20</a></li>
           <li><span>Instagram</span><a href="https://www.instagram.com/zapchast_chacman/" target="_blank" rel="noopener">@zapchast_chacman</a></li>
           <li><span>Адрес</span><span class="cv">г. Атырау, ул. Сырым Каженбаев, 7а</span></li>
           <li><span>Режим</span><span class="cv">Ежедневно, 09:00–04:00</span></li>
@@ -873,7 +900,7 @@ html.js .rv.in{opacity:1;transform:none}
 
 <div class="mbar" id="mbar">
   <a class="btn btn-red" href="#request">Оставить заявку</a>
-  <a class="btn btn-line" href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">Связаться</a>
+  <a class="btn btn-line" href="https://wa.me/77756774020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">Связаться</a>
 </div>
 
 <aside class="tweaks" id="tweaks" aria-label="Tweaks">
@@ -898,6 +925,40 @@ html.js .rv.in{opacity:1;transform:none}
   /* Google Sheets: the Apps Script Web App URL lives in config.js (window.SHACMAN_SHEETS_URL).
      No config.js or an empty value keeps the form in demo mode. See google-sheets/SETUP.md */
   var SHEETS_URL=window.SHACMAN_SHEETS_URL||'';
+  /* i18n:start */
+  var I18N={"ТОО «ErDos Trans Service»": {"kk": "ЖШС «ErDos Trans Service»", "en": "ErDos Trans Service LLP"}, "Каталог": {"kk": "Каталог", "en": "Catalog"}, "Услуги": {"kk": "Қызметтер", "en": "Services"}, "Преимущества": {"kk": "Артықшылықтар", "en": "Why us"}, "О компании": {"kk": "Компания туралы", "en": "About us"}, "Контакты": {"kk": "Байланыс", "en": "Contacts"}, "Оставить заявку": {"kk": "Өтінім қалдыру", "en": "Send a request"}, "Работаем с 2017 года": {"kk": "2017 жылдан бері жұмыс істейміз", "en": "Working since 2017"}, "Запчасти для спецтехники и грузовых автомобилей.": {"kk": "Арнайы техника мен жүк көліктеріне арналған қосалқы бөлшектер.", "en": "Parts for special equipment and trucks."}, "Без лишних простоев.": {"kk": "Бос тұрып қалмай.", "en": "No unnecessary downtime."}, "Работаем в сфере запчастей для китайской спецтехники и грузовиков, а также оказываем услуги по их ремонту. Назовите деталь, артикул или модель, и специалисты SHACMAN PARTS помогут уточнить подходящий вариант.": {"kk": "Қытайдың арнайы техникасы мен жүк көліктеріне арналған қосалқы бөлшектер саласында жұмыс істейміз, сондай-ақ оларды жөндеу қызметтерін көрсетеміз. Бөлшектің атауын, артикулін немесе модельді айтыңыз, SHACMAN PARTS мамандары сәйкес нұсқаны нақтылауға көмектеседі.", "en": "We supply parts for Chinese special equipment and trucks and offer repair services for them. Tell us the part, article number or model, and SHACMAN PARTS specialists will help you find the right option."}, "Подобрать запчасть": {"kk": "Қосалқы бөлшек таңдау", "en": "Find a part"}, "Связаться с менеджером": {"kk": "Менеджермен байланысу", "en": "Contact a manager"}, "Двигатель": {"kk": "Қозғалтқыш", "en": "Engine"}, "Электрика": {"kk": "Электр жабдығы", "en": "Electrics"}, "Тормоза": {"kk": "Тежегіш", "en": "Brakes"}, "Подвеска": {"kk": "Аспа", "en": "Suspension"}, "Трансмиссия": {"kk": "Трансмиссия", "en": "Transmission"}, "Фильтры": {"kk": "Сүзгілер", "en": "Filters"}, "Листайте схему": {"kk": "Сызбаны жылжытыңыз", "en": "Swipe the diagram"}, "Нажмите на узел, чтобы открыть категорию": {"kk": "Санатты ашу үшін торапты басыңыз", "en": "Tap a component to open its category"}, "Что нужно подобрать?": {"kk": "Нені таңдау керек?", "en": "What do you need?"}, "Отправить запрос": {"kk": "Сұраныс жіберу", "en": "Send request"}, "Наличие и стоимость уточняются перед заказом. Остальные данные можно указать на следующем шаге.": {"kk": "Тапсырыс алдында бар-жоғы мен құны нақтыланады. Қалған деректерді келесі қадамда көрсетуге болады.", "en": "Availability and price are confirmed before ordering. You can add the remaining details on the next step."}, "Найдите нужную запчасть": {"kk": "Керекті қосалқы бөлшекті табыңыз", "en": "Find the part you need"}, "Выберите категорию или воспользуйтесь поиском.": {"kk": "Санатты таңдаңыз немесе іздеуді пайдаланыңыз.", "en": "Choose a category or use the search."}, "Двигатель и комплектующие": {"kk": "Қозғалтқыш және оның бөлшектері", "en": "Engine and components"}, "Поршневая группа": {"kk": "Поршень тобы", "en": "Piston group"}, "Прокладки и ГБЦ": {"kk": "Тығыздағыштар және цилиндр блогының басы", "en": "Gaskets and cylinder head"}, "Ремни и ролики": {"kk": "Белдіктер мен роликтер", "en": "Belts and rollers"}, "Трансмиссия и сцепление": {"kk": "Трансмиссия және ілінісу", "en": "Transmission and clutch"}, "Комплект сцепления": {"kk": "Ілінісу жинағы", "en": "Clutch kit"}, "Шестерни и валы": {"kk": "Тісті доңғалақтар мен біліктер", "en": "Gears and shafts"}, "Карданные валы": {"kk": "Кардан біліктері", "en": "Drive shafts"}, "Тормозная система": {"kk": "Тежегіш жүйесі", "en": "Brake system"}, "Колодки и диски": {"kk": "Колодкалар мен дискілер", "en": "Pads and discs"}, "Барабаны": {"kk": "Барабандар", "en": "Drums"}, "Суппорты": {"kk": "Суппорттар", "en": "Calipers"}, "Подвеска и ходовая часть": {"kk": "Аспа және жүріс бөлігі", "en": "Suspension and running gear"}, "Рессоры": {"kk": "Рессорлар", "en": "Leaf springs"}, "Амортизаторы": {"kk": "Амортизаторлар", "en": "Shock absorbers"}, "Ступицы": {"kk": "Ступицалар", "en": "Hubs"}, "Электрика и датчики": {"kk": "Электр жабдығы және датчиктер", "en": "Electrics and sensors"}, "Датчики": {"kk": "Датчиктер", "en": "Sensors"}, "Стартеры и генераторы": {"kk": "Стартерлер мен генераторлар", "en": "Starters and alternators"}, "Жгуты и реле": {"kk": "Сымдар шоғы және реле", "en": "Harnesses and relays"}, "Фильтры и расходные материалы": {"kk": "Сүзгілер және шығын материалдары", "en": "Filters and consumables"}, "Масляные": {"kk": "Майлы", "en": "Oil"}, "Топливные": {"kk": "Жанармай", "en": "Fuel"}, "Воздушные": {"kk": "Ауа", "en": "Air"}, "По вашему запросу ничего не найдено.": {"kk": "Сұранысыңыз бойынша ештеңе табылмады.", "en": "Nothing found for your search."}, "Это не значит, что детали нет: отправьте запрос, и менеджер уточнит наличие.": {"kk": "Бұл бөлшектің жоқ екенін білдірмейді: сұраныс жіберіңіз, менеджер бар-жоғын нақтылайды.", "en": "That doesn't mean the part is unavailable: send a request and a manager will check availability."}, "Отправить запрос на подбор": {"kk": "Таңдауға сұраныс жіберу", "en": "Send a part request"}, "Не нашли нужную деталь? Опишите её, мы поможем подобрать.": {"kk": "Керекті бөлшекті таппадыңыз ба? Сипаттап жазыңыз, таңдауға көмектесеміз.", "en": "Can't find the part? Describe it and we'll help you choose."}, "Ремонт спецтехники и грузовиков": {"kk": "Арнайы техника мен жүк көліктерін жөндеу", "en": "Repair of special equipment and trucks"}, "Помимо запчастей, мы оказываем услуги по ремонту китайской спецтехники и грузовых автомобилей.": {"kk": "Қосалқы бөлшектерден бөлек, Қытай арнайы техникасы мен жүк автокөліктерін жөндеу қызметтерін көрсетеміз.", "en": "In addition to parts, we repair Chinese special equipment and trucks."}, "Ремонт двигателей": {"kk": "Қозғалтқыштарды жөндеу", "en": "Engine repair"}, "Ремонт двигателей спецтехники и грузовых автомобилей.": {"kk": "Арнайы техника мен жүк автокөліктерінің қозғалтқыштарын жөндеу.", "en": "Engine repair for special equipment and trucks."}, "Уточнить в WhatsApp": {"kk": "WhatsApp-та нақтылау", "en": "Ask on WhatsApp"}, "Ремонт ходовой части": {"kk": "Жүріс бөлігін жөндеу", "en": "Running gear repair"}, "Ремонт ходовой части спецтехники и грузовиков.": {"kk": "Арнайы техника мен жүк көліктерінің жүріс бөлігін жөндеу.", "en": "Running gear repair for special equipment and trucks."}, "Ремонт любой сложности": {"kk": "Кез келген күрделіліктегі жөндеу", "en": "Repairs of any complexity"}, "Беремся за ремонт любой сложности: от небольших неисправностей до серьёзных поломок.": {"kk": "Кез келген күрделіліктегі жөндеуді қолға аламыз: шағын ақаулардан бастап ауыр бұзылуларға дейін.", "en": "We take on repairs of any complexity, from minor faults to serious breakdowns."}, "Обсудить ремонт": {"kk": "Жөндеуді талқылау", "en": "Discuss a repair"}, "Не нашли нужную деталь? Поможем с подбором": {"kk": "Керекті бөлшекті таппадыңыз ба? Таңдауға көмектесеміз", "en": "Can't find the part? We'll help you choose"}, "Отправьте название детали, артикул или информацию об автомобиле — менеджер сможет уточнить запрос.": {"kk": "Бөлшектің атауын, артикулін немесе көлік туралы ақпаратты жіберіңіз — менеджер сұранысты нақтылай алады.", "en": "Send the part name, article number or vehicle details, and a manager will clarify your request."}, "ЗАПРОС": {"kk": "СҰРАНЫС", "en": "REQUEST"}, "Марка и модель, название детали или артикул": {"kk": "Марка мен модель, бөлшектің атауы немесе артикулі", "en": "Make and model, part name or article number"}, "ОТВЕТ": {"kk": "ЖАУАП", "en": "REPLY"}, "Менеджер уточняет детали и связывается с вами": {"kk": "Менеджер мәліметтерді нақтылап, сізбен байланысады", "en": "A manager clarifies the details and contacts you"}, "СВЯЗЬ": {"kk": "БАЙЛАНЫС", "en": "CONTACT"}, "WhatsApp или звонок, как вам удобнее": {"kk": "WhatsApp немесе қоңырау, өзіңізге ыңғайлысы", "en": "WhatsApp or a call, whichever suits you"}, "Марка и модель грузовика": {"kk": "Жүк көлігінің маркасы мен моделі", "en": "Truck make and model"}, "Укажите марку и модель грузовика": {"kk": "Жүк көлігінің маркасы мен моделін көрсетіңіз", "en": "Enter the truck make and model"}, "Год выпуска": {"kk": "Шығарылған жылы", "en": "Year of manufacture"}, "необязательно": {"kk": "міндетті емес", "en": "optional"}, "Укажите год от 1990 до 2026": {"kk": "1990 мен 2026 арасындағы жылды көрсетіңіз", "en": "Enter a year between 1990 and 2026"}, "Название запчасти или артикул": {"kk": "Қосалқы бөлшектің атауы немесе артикулі", "en": "Part name or article number"}, "Укажите название детали или артикул": {"kk": "Бөлшектің атауын немесе артикулін көрсетіңіз", "en": "Enter the part name or article number"}, "Категория": {"kk": "Санат", "en": "Category"}, "Не выбрана": {"kk": "Таңдалмаған", "en": "Not selected"}, "Комментарий": {"kk": "Пікір", "en": "Comment"}, "Как с вами связаться": {"kk": "Сізбен қалай байланысуға болады", "en": "How should we contact you?"}, "Звонок": {"kk": "Қоңырау", "en": "Call"}, "Номер WhatsApp": {"kk": "WhatsApp нөмірі", "en": "WhatsApp number"}, "Введите номер телефона полностью": {"kk": "Телефон нөмірін толық енгізіңіз", "en": "Enter the full phone number"}, "Я даю согласие на обработку моих персональных данных.": {"kk": "Жеке деректерімді өңдеуге келісім беремін.", "en": "I consent to the processing of my personal data."}, "Подтвердите согласие, чтобы отправить заявку": {"kk": "Өтінімді жіберу үшін келісімді растаңыз", "en": "Please confirm your consent to submit the request"}, "Не удалось отправить заявку. Проверьте интернет и попробуйте ещё раз или свяжитесь с менеджером.": {"kk": "Өтінімді жіберу мүмкін болмады. Интернетті тексеріп, қайталап көріңіз немесе менеджермен байланысыңыз.", "en": "Could not send your request. Check your connection and try again, or contact a manager."}, "Отправить заявку": {"kk": "Өтінімді жіберу", "en": "Send request"}, "Демонстрация: данные никуда не отправляются.": {"kk": "Демо: деректер ешқайда жіберілмейді.", "en": "Demo: no data is sent anywhere."}, "Заявка принята": {"kk": "Өтінім қабылданды", "en": "Request received"}, "Менеджер свяжется с вами в ближайшее время.": {"kk": "Менеджер жақын арада сізбен байланысады.", "en": "A manager will contact you shortly."}, "Почему SHACMAN PARTS": {"kk": "Неге SHACMAN PARTS", "en": "Why SHACMAN PARTS"}, "Подбор под запрос клиента": {"kk": "Клиент сұранысына сай таңдау", "en": "Selection based on your request"}, "Опишите деталь или автомобиль, а менеджер поможет уточнить подходящий вариант.": {"kk": "Бөлшекті немесе көлікті сипаттаңыз, менеджер сәйкес нұсқаны нақтылауға көмектеседі.", "en": "Describe the part or vehicle, and a manager will help clarify the right option."}, "Прямая связь с менеджером": {"kk": "Менеджермен тікелей байланыс", "en": "Direct contact with a manager"}, "Общение напрямую: удобный мессенджер или звонок, без длинных анкет.": {"kk": "Тікелей байланыс: ыңғайлы мессенджер немесе қоңырау, ұзын сауалнамасыз.", "en": "Talk directly: your preferred messenger or a call, with no long forms."}, "Для владельцев и автопарков": {"kk": "Иелері мен автопарктер үшін", "en": "For owners and fleets"}, "Запросы по одной детали или по списку для нескольких машин.": {"kk": "Бір бөлшекке де, бірнеше көлікке арналған тізімге де сұраныс қабылдаймыз.", "en": "Requests for a single part or for a list covering several vehicles."}, "Наличие и цена до заказа": {"kk": "Тапсырыс алдында бар-жоғы мен бағасы", "en": "Availability and price before you order"}, "Перед заказом можно уточнить наличие и стоимость нужной позиции.": {"kk": "Тапсырыс алдында керекті позицияның бар-жоғы мен құнын нақтылауға болады.", "en": "Before ordering, you can check the availability and price of the item you need."}, "Запчасти и ремонт для китайской спецтехники": {"kk": "Қытай арнайы техникасына арналған қосалқы бөлшектер және жөндеу", "en": "Parts and repair for Chinese special equipment"}, "SHACMAN PARTS — направление компании ТОО «ErDos Trans Service». С 2017 года мы работаем в сфере запчастей для китайской спецтехники и грузовых автомобилей и оказываем услуги по их ремонту. Мы строим работу вокруг запроса клиента: помогаем уточнить нужную деталь и быстро связаться с менеджером.": {"kk": "SHACMAN PARTS — ЖШС «ErDos Trans Service» компаниясының бағыты. 2017 жылдан бері Қытай арнайы техникасы мен жүк автокөліктеріне арналған қосалқы бөлшектер саласында жұмыс істеп, оларды жөндеу қызметтерін көрсетеміз. Жұмысымызды клиент сұранысына негіздейміз: керекті бөлшекті нақтылауға көмектесеміз және менеджермен тез байланысуға мүмкіндік береміз.", "en": "SHACMAN PARTS is a division of ErDos Trans Service LLP. Since 2017 we have worked in the field of parts for Chinese special equipment and trucks and provide repair services for them. We build our work around the customer's request: we help clarify the right part and quickly connect you with a manager."}, "Юридическое лицо · бренд SHACMAN PARTS": {"kk": "Заңды тұлға · SHACMAN PARTS бренді", "en": "Legal entity · SHACMAN PARTS brand"}, "Вы отправляете запрос": {"kk": "Сіз сұраныс жібересіз", "en": "You send a request"}, "Название детали, артикул или данные автомобиля.": {"kk": "Бөлшектің атауы, артикулі немесе көлік деректері.", "en": "Part name, article number or vehicle details."}, "Менеджер уточняет детали": {"kk": "Менеджер мәліметтерді нақтылайды", "en": "A manager clarifies the details"}, "Сверяет информацию и задаёт вопросы, если нужно.": {"kk": "Ақпаратты салыстырып, қажет болса сұрақ қояды.", "en": "Checks the information and asks questions if needed."}, "Вы получаете ответ": {"kk": "Сіз жауап аласыз", "en": "You get an answer"}, "Наличие и стоимость до принятия решения о заказе.": {"kk": "Тапсырыс туралы шешім қабылдағанға дейін бар-жоғы мен құны.", "en": "Availability and price before you decide to order."}, "Нужна запчасть или ремонт?": {"kk": "Қосалқы бөлшек немесе жөндеу керек пе?", "en": "Need a part or a repair?"}, "Расскажите, что нужно: поможем подобрать деталь или обсудим ремонт.": {"kk": "Не керек екенін айтыңыз: бөлшекті таңдауға көмектесеміз немесе жөндеуді талқылаймыз.", "en": "Tell us what you need: we'll help choose the part or discuss the repair."}, "Связаться с нами": {"kk": "Бізбен байланысу", "en": "Contact us"}, "ТОО «ErDos Trans Service». Запчасти для китайской спецтехники и услуги по ремонту. Работаем с 2017 года.": {"kk": "ЖШС «ErDos Trans Service». Қытай арнайы техникасына арналған қосалқы бөлшектер және жөндеу қызметтері. 2017 жылдан бері жұмыс істейміз.", "en": "ErDos Trans Service LLP. Parts for Chinese special equipment and repair services. Working since 2017."}, "Разделы": {"kk": "Бөлімдер", "en": "Sections"}, "Услуги по ремонту": {"kk": "Жөндеу қызметтері", "en": "Repair services"}, "Телефон": {"kk": "Телефон", "en": "Phone"}, "Адрес": {"kk": "Мекенжай", "en": "Address"}, "г. Атырау, ул. Сырым Каженбаев, 7а": {"kk": "Атырау қ., Сырым Қаженбаев көшесі, 7а", "en": "Atyrau, Syrym Kazhenbayev St., 7a"}, "Режим": {"kk": "Жұмыс режимі", "en": "Hours"}, "Ежедневно, 09:00–04:00": {"kk": "Күн сайын, 09:00–04:00", "en": "Daily, 09:00–04:00"}, "Фотографии временные, источник Wikimedia Commons. Самосвал сзади: Retired electrician, CC0. Двигатель MAN D2676, подвеска Büssing и коробка передач Hyundai: Spielvogel, CC0. Колёсный узел BPW: Spielvogel, CC BY-SA 4.0. Названия и изображения техники других производителей использованы только как иллюстрация деталей и не означают партнёрства.": {"kk": "Фотосуреттер уақытша, дереккөзі: Wikimedia Commons. Артынан түсірілген самосвал: Retired electrician, CC0. MAN D2676 қозғалтқышы, Büssing аспасы және Hyundai беріліс қорабы: Spielvogel, CC0. BPW доңғалақ торабы: Spielvogel, CC BY-SA 4.0. Басқа өндірушілердің техникасының атаулары мен суреттері тек бөлшектерді көрсету үшін қолданылған және серіктестікті білдірмейді.", "en": "Photos are temporary, source: Wikimedia Commons. Dump truck rear view: Retired electrician, CC0. MAN D2676 engine, Büssing suspension and Hyundai gearbox: Spielvogel, CC0. BPW wheel end: Spielvogel, CC BY-SA 4.0. Names and images of other manufacturers' equipment are used only to illustrate parts and do not imply partnership."}, "© 2026 ТОО «ErDos Trans Service». Все права защищены.": {"kk": "© 2026 ЖШС «ErDos Trans Service». Барлық құқықтар қорғалған.", "en": "© 2026 ErDos Trans Service LLP. All rights reserved."}, "Макет · Stage 1 · контент и изображения временные": {"kk": "Макет · Stage 1 · мазмұн мен суреттер уақытша", "en": "Mockup · Stage 1 · content and images are temporary"}, "Связаться": {"kk": "Байланысу", "en": "Contact"}, "Акцентный цвет": {"kk": "Акцент түсі", "en": "Accent colour"}, "Обработка фото": {"kk": "Фотоны өңдеу", "en": "Photo treatment"}, "Цвет": {"kk": "Түс", "en": "Colour"}, "Ч/Б": {"kk": "А/Қ", "en": "B/W"}, "Клавиша T скрывает панель": {"kk": "T пернесі панельді жасырады", "en": "Press T to hide the panel"}, "КОЛЁСНАЯ БАЗА": {"kk": "ДӨҢГЕЛЕК БАЗАСЫ", "en": "WHEELBASE"}, "SHACMAN · САМОСВАЛ 8×4 · СХЕМА БЕЗ МАСШТАБА": {"kk": "SHACMAN · 8×4 САМОСВАЛ · СЫЗБА МАСШТАБСЫЗ", "en": "SHACMAN · 8×4 DUMP TRUCK · NOT TO SCALE"}, "SHACMAN PARTS — на главную": {"kk": "SHACMAN PARTS: басты бет", "en": "SHACMAN PARTS: home"}, "Основная навигация": {"kk": "Негізгі навигация", "en": "Main navigation"}, "Открыть меню": {"kk": "Мәзірді ашу", "en": "Open menu"}, "Закрыть меню": {"kk": "Мәзірді жабу", "en": "Close menu"}, "Название детали или артикул": {"kk": "Бөлшектің атауы немесе артикулі", "en": "Part name or article number"}, "Например: сцепление, фильтр, датчик": {"kk": "Мысалы: ілінісу, сүзгі, датчик", "en": "For example: clutch, filter, sensor"}, "Поиск по категориям": {"kk": "Санаттар бойынша іздеу", "en": "Search categories"}, "Дизельный двигатель грузового автомобиля": {"kk": "Жүк автокөлігінің дизельді қозғалтқышы", "en": "Diesel engine of a truck"}, "Коробка передач в разрезе, узел сцепления": {"kk": "Қимада көрсетілген беріліс қорабы, ілінісу торабы", "en": "Gearbox cross-section with clutch assembly"}, "Колёсный узел грузового автомобиля с тормозным диском в разрезе": {"kk": "Тежегіш дискісі қимада көрсетілген жүк көлігінің доңғалақ торабы", "en": "Truck wheel end with a brake disc in cross-section"}, "Рессорная подвеска и колёса грузового автомобиля": {"kk": "Жүк көлігінің рессорлы аспасы мен доңғалақтары", "en": "Leaf spring suspension and wheels of a truck"}, "Блок управления двигателем и разъёмы": {"kk": "Қозғалтқышты басқару блогы және ажыратқыштар", "en": "Engine control unit and connectors"}, "Масляный фильтр и топливные магистрали двигателя": {"kk": "Қозғалтқыштың май сүзгісі мен жанармай магистральдері", "en": "Engine oil filter and fuel lines"}, "Двигатель грузового автомобиля": {"kk": "Жүк автокөлігінің қозғалтқышы", "en": "Truck engine"}, "Ходовая часть и подвеска грузового автомобиля": {"kk": "Жүк көлігінің жүріс бөлігі мен аспасы", "en": "Truck running gear and suspension"}, "Например: SHACMAN X3000": {"kk": "Мысалы: SHACMAN X3000", "en": "For example: SHACMAN X3000"}, "Например: комплект сцепления или артикул детали": {"kk": "Мысалы: ілінісу жинағы немесе бөлшек артикулі", "en": "For example: clutch kit or part article number"}, "VIN, количество, срок, любые уточнения": {"kk": "VIN, саны, мерзімі, кез келген нақтылау", "en": "VIN, quantity, deadline, any details"}, "Способ связи": {"kk": "Байланыс тәсілі", "en": "Contact method"}, "Самосвал SHACMAN, вид сзади": {"kk": "SHACMAN самосвалы, артқы көрінісі", "en": "SHACMAN dump truck, rear view"}, "Логотип «Запчасти SHACMAN»": {"kk": "«Запчасти SHACMAN» логотипі", "en": "\"Zapchasti SHACMAN\" logo"}, "Чертёж самосвала SHACMAN 8×4 с отмеченными узлами": {"kk": "Тораптары белгіленген SHACMAN 8×4 самосвалының сызбасы", "en": "Drawing of a SHACMAN 8×4 dump truck with marked components"}, "Жёлтый": {"kk": "Сары", "en": "Yellow"}, "Оранжевый": {"kk": "Қызғылт сары", "en": "Orange"}, "Белый": {"kk": "Ақ", "en": "White"}, "Язык / Language": {"kk": "Тіл / Language", "en": "Language"}, "Отправляем…": {"kk": "Жіберілуде…", "en": "Sending…"}, "Заявка только что была отправлена. Подождите несколько секунд и попробуйте снова.": {"kk": "Өтінім жаңа ғана жіберілді. Бірнеше секунд күтіп, қайталап көріңіз.", "en": "Your request was just sent. Please wait a few seconds and try again."}, "Здравствуйте! Хочу подобрать запчасть.": {"kk": "Сәлеметсіз бе! Қосалқы бөлшек таңдағым келеді.", "en": "Hello! I would like to find a part."}, "Здравствуйте! Интересует ремонт двигателя.": {"kk": "Сәлеметсіз бе! Қозғалтқышты жөндеу туралы білгім келеді.", "en": "Hello! I am interested in engine repair."}, "Здравствуйте! Интересует ремонт ходовой части.": {"kk": "Сәлеметсіз бе! Жүріс бөлігін жөндеу туралы білгім келеді.", "en": "Hello! I am interested in running gear repair."}, "Здравствуйте! Нужен ремонт спецтехники.": {"kk": "Сәлеметсіз бе! Арнайы техниканы жөндеу керек.", "en": "Hello! I need a special equipment repair."}, "SHACMAN PARTS, Атырау: запчасти для китайской спецтехники и грузовых автомобилей, ремонт двигателей и ходовой части. Работаем с 2017 года.": {"kk": "SHACMAN PARTS, Атырау: Қытай арнайы техникасы мен жүк автокөліктеріне арналған қосалқы бөлшектер, қозғалтқыш пен жүріс бөлігін жөндеу. 2017 жылдан бері жұмыс істейміз.", "en": "SHACMAN PARTS, Atyrau: parts for Chinese special equipment and trucks, engine and running gear repair. Working since 2017."}, "Сайт": {"kk": "Сайт", "en": "Website"}, "ҚАЗ": {"kk": "ҚАЗ", "en": "ҚАЗ"}};
+  var CAT_RU={engine:'Двигатель и комплектующие',transmission:'Трансмиссия и сцепление',brakes:'Тормозная система',suspension:'Подвеска и ходовая часть',electrics:'Электрика и датчики',filters:'Фильтры и расходные материалы'};
+  var META_RU="SHACMAN PARTS, Атырау: запчасти для китайской спецтехники и грузовых автомобилей, ремонт двигателей и ходовой части. Работаем с 2017 года.";
+  var LANG='ru',i18nText=[],i18nAttr=[];
+  function norm(x){return x.replace(/\s+/g,' ').trim()}
+  function T(ru){var e=I18N[ru];return (e&&e[LANG])||ru}
+  function i18nCollect(){
+    var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n;
+    while((n=w.nextNode())){
+      var p=n.parentNode;if(!p||/^(SCRIPT|STYLE)$/i.test(p.nodeName))continue;
+      var k=norm(n.nodeValue);
+      if(k&&I18N[k])i18nText.push({n:n,k:k,pre:n.nodeValue.match(/^\s*/)[0],post:n.nodeValue.match(/\s*$/)[0]});
+    }
+    ['placeholder','aria-label','alt'].forEach(function(a){
+      $$('['+a+']').forEach(function(el){var k=norm(el.getAttribute(a));if(I18N[k])i18nAttr.push({el:el,a:a,k:k})});
+    });
+  }
+  function contactLabel(){$('label[for=contact]').textContent=T(method==='WhatsApp'?'Номер WhatsApp':'Телефон')}
+  function i18nApply(lang){
+    LANG=lang;
+    root.setAttribute('lang',lang);
+    i18nText.forEach(function(r){var e=I18N[r.k];r.n.nodeValue=r.pre+((e&&e[lang])||r.k)+r.post});
+    i18nAttr.forEach(function(r){var e=I18N[r.k];r.el.setAttribute(r.a,(e&&e[lang])||r.k)});
+    var m=document.querySelector('meta[name=description]');if(m)m.setAttribute('content',T(META_RU));
+    $$('a[href^="https://wa.me/"]').forEach(function(a){
+      if(a.__ru===undefined){var q=a.getAttribute('href').split('?text=')[1];a.__ru=q?decodeURIComponent(q):''}
+      a.setAttribute('href',a.getAttribute('href').split('?')[0]+'?text='+encodeURIComponent(T(a.__ru)));
+    });
+    $$('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-lang')===lang))});
+    try{localStorage.setItem('sp-lang',lang)}catch(e){}
+  }
+  /* i18n:end */
+
   root.classList.add('js');
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   function goTo(el,offset){
@@ -918,7 +979,7 @@ html.js .rv.in{opacity:1;transform:none}
   function setMenu(open){
     nav.classList.toggle('open',open);
     burger.setAttribute('aria-expanded',String(open));
-    burger.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');
+    burger.setAttribute('aria-label',T(open?'Закрыть меню':'Открыть меню'));
     $('#burgerIc').innerHTML=open?'<path d="M5 5l14 14M19 5L5 19"/>':'<path d="M3 7h18M3 12h18M3 17h18"/>';
     onScroll();
   }
@@ -1013,7 +1074,7 @@ html.js .rv.in{opacity:1;transform:none}
     b.addEventListener('click',function(){
       method=b.getAttribute('data-m');
       $$('.seg button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      $('label[for=contact]').textContent=method==='WhatsApp'?'Номер WhatsApp':'Телефон';
+      contactLabel();
     });
   });
   var sending=false,sendBtn=$('#sendBtn'),sendLbl=$('#sendLbl'),sendErr=$('#sendErr');
@@ -1025,8 +1086,8 @@ html.js .rv.in{opacity:1;transform:none}
     $('#done').classList.remove('show');form.hidden=false;
   }
   function showDone(data,sent){
-    $('#doneTitle').textContent='Заявка принята';
-    $('#doneNote').textContent=sent?'Менеджер свяжется с вами в ближайшее время.':'Демонстрация: данные никуда не отправляются.';
+    $('#doneTitle').textContent=T('Заявка принята');
+    $('#doneNote').textContent=T(sent?'Менеджер свяжется с вами в ближайшее время.':'Демонстрация: данные никуда не отправляются.');
     var bar=$('.ok-bar i');bar.style.setProperty('--okms',OK_MS+'ms');
     form.hidden=true;
     var d=$('#done');d.classList.remove('show');void d.offsetWidth;d.classList.add('show');
@@ -1050,19 +1111,19 @@ html.js .rv.in{opacity:1;transform:none}
     if(bad){bad.focus();return}
     var data={
       truck:$('#truck').value.trim(),year:$('#year').value.trim(),part:partInp.value.trim(),
-      category:catSel.value?catSel.options[catSel.selectedIndex].text:'',
+      category:catSel.value?(CAT_RU[catSel.value]||''):'',
       comment:$('#comment').value.trim(),method:method,contact:$('#contact').value.trim(),
       page:location.href.split('#')[0],website:$('#website').value
     };
     if(data.website){showDone(data,true);return}          /* honeypot: bots see a normal success */
     if(!SHEETS_URL){showDone(data,false);return}
     var last=+load('sp-last')||0;
-    if(Date.now()-last<15000){sendErr.textContent='Заявка только что была отправлена. Подождите несколько секунд и попробуйте снова.';sendErr.hidden=false;return}
-    sending=true;sendBtn.disabled=true;sendLbl.textContent='Отправляем…';
+    if(Date.now()-last<15000){sendErr.textContent=T('Заявка только что была отправлена. Подождите несколько секунд и попробуйте снова.');sendErr.hidden=false;return}
+    sending=true;sendBtn.disabled=true;sendLbl.textContent=T('Отправляем…');
     fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)})
       .then(function(){store('sp-last',String(Date.now()));showDone(data,true)})
-      .catch(function(){sendErr.textContent='Не удалось отправить заявку. Проверьте интернет и попробуйте ещё раз или свяжитесь с менеджером.';sendErr.hidden=false})
-      .then(function(){sending=false;sendBtn.disabled=false;sendLbl.textContent='Отправить заявку'});
+      .catch(function(){sendErr.textContent=T('Не удалось отправить заявку. Проверьте интернет и попробуйте ещё раз или свяжитесь с менеджером.');sendErr.hidden=false})
+      .then(function(){sending=false;sendBtn.disabled=false;sendLbl.textContent=T('Отправить заявку')});
   });
   $('#agree').addEventListener('change',function(){if(this.checked)$('#f-agree').classList.remove('bad')});
 
@@ -1089,5 +1150,24 @@ html.js .rv.in{opacity:1;transform:none}
     if((e.key==='t'||e.key==='T'||e.key==='е'||e.key==='Е')&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&t!=='INPUT'&&t!=='TEXTAREA'&&t!=='SELECT'){tw.classList.toggle('open')}
   });
   if(location.hash==='#tweaks')tw.classList.add('open');
+  /* i18n-init:start */
+  i18nCollect();
+  (function(){
+    var saved=null;try{saved=localStorage.getItem('sp-lang')}catch(e){}
+    var navLang=(navigator.language||'ru').toLowerCase();
+    var lang=saved||(navLang.indexOf('kk')===0?'kk':navLang.indexOf('en')===0?'en':'ru');
+    if(['ru','kk','en'].indexOf(lang)<0)lang='ru';
+    if(lang!=='ru'){i18nApply(lang);contactLabel()}
+    $$('.lang button').forEach(function(b){
+      b.addEventListener('click',function(){
+        i18nApply(b.getAttribute('data-lang'));contactLabel();
+        var open=$('#nav').classList.contains('open');
+        $('#burger').setAttribute('aria-label',T(open?'Закрыть меню':'Открыть меню'));
+      });
+    });
+    $$('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-lang')===lang))});
+  })();
+  /* i18n-init:end */
+
 })();
 </script>
