@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<meta name="description" content="SHACMAN PARTS, Атырау: запчасти для китайской спецтехники и грузовых автомобилей, ремонт двигателей и ходовой части. Работаем с 2017 года.">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>SHACMAN PARTS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -333,6 +334,35 @@ select.inp{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.
 .ok-bar i{display:block;height:100%;background:var(--accent);transform-origin:left;animation:okBar var(--okms,3.8s) linear both}
 @keyframes okBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 
+.ct .cv,.ct a{color:#EDEBE5;font-size:15px}
+.ct a{border-bottom:1px solid rgba(240,176,20,.55);width:fit-content;transition:color .2s,border-color .2s}
+.ct a:hover{color:var(--accent);border-color:var(--accent)}
+.soc a{border:1px solid rgba(240,176,20,.55);color:var(--accent);padding:10px 14px;font:500 13px/1 var(--f-mono);letter-spacing:.06em;transition:background .2s,color .2s}
+.soc a:hover{background:var(--accent);color:var(--on-accent)}
+
+/* Services */
+.services{background:var(--graphite-3);border-top:1px solid var(--line)}
+.services .note{color:var(--steel)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.svc{position:relative;overflow:hidden;min-height:380px;display:flex;align-items:flex-end;background:var(--graphite);color:#fff;isolation:isolate}
+.svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:var(--photo);transition:transform .8s var(--ease);z-index:-2}
+.svc:not(.svc-accent)::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(10,10,10,.94) 0,rgba(10,10,10,.6) 48%,rgba(10,10,10,.15) 100%)}
+.svc::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.svc:hover img{transform:scale(1.06)}
+.svc:hover::after{transform:scaleX(1)}
+.svc-body{width:100%;padding:26px 28px 24px;display:flex;flex-direction:column;gap:12px}
+.svc h3{font-family:var(--f-display);text-transform:uppercase;font-weight:600;font-size:clamp(1.4rem,2vw,1.85rem);line-height:1.12}
+.svc p{color:#D6D2C8;font-size:16px;max-width:380px}
+.svc .go{margin-top:6px}
+.svc-accent{background:var(--accent);color:var(--on-accent)}
+.svc-accent p{color:rgba(10,10,10,.82)}
+.svc-accent .go{color:var(--on-accent)}
+.svc-accent .go svg{color:var(--on-accent)}
+.svc-ic{position:absolute;top:28px;left:28px;width:76px;height:76px;color:var(--on-accent)}
+.svc-accent::after{background:var(--on-accent)}
+@media (max-width:1100px){.svc-grid{grid-template-columns:1fr 1fr}.svc-accent{grid-column:1/-1;min-height:300px}}
+@media (max-width:640px){.svc-grid{grid-template-columns:1fr}.svc{min-height:320px}}
+
 /* Reveal */
 html.js .rv{opacity:.35;transform:translateY(22px);transition:opacity .7s ease,transform .7s var(--ease);transition-delay:var(--d,0s)}
 html.js .rv.in{opacity:1;transform:none}
@@ -402,6 +432,7 @@ html.js .rv.in{opacity:1;transform:none}
     </a>
     <nav class="nav" id="nav" aria-label="Основная навигация">
       <a class="l" href="#catalog">Каталог</a>
+      <a class="l" href="#services">Услуги</a>
       <a class="l" href="#advantages">Преимущества</a>
       <a class="l" href="#about">О компании</a>
       <a class="l" href="#contacts">Контакты</a>
@@ -420,12 +451,12 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <div class="eyebrow"><i></i><span class="mono">Работаем с 2017 года</span></div>
-      <h1 class="display">Запчасти для грузовых автомобилей.<em>Без лишних простоев.</em></h1>
-      <p class="hero-sub">Работаем в сфере запчастей для китайской спецтехники и грузовиков, а также оказываем услуги по её ремонту. Назовите деталь, артикул или модель, и специалисты SHACMAN PARTS помогут уточнить подходящий вариант.</p>
+      <h1 class="display">Запчасти для спецтехники и грузовых автомобилей.<em>Без лишних простоев.</em></h1>
+      <p class="hero-sub">Работаем в сфере запчастей для китайской спецтехники и грузовиков, а также оказываем услуги по их ремонту. Назовите деталь, артикул или модель, и специалисты SHACMAN PARTS помогут уточнить подходящий вариант.</p>
       <div class="hero-cta">
         <a class="btn btn-red" href="#request">Подобрать запчасть
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-line" href="#contacts">Связаться с менеджером</a>
+        <a class="btn btn-line" href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">Связаться с менеджером</a>
       </div>
     </div>
 
@@ -549,7 +580,7 @@ html.js .rv.in{opacity:1;transform:none}
     <div class="sec-head">
       <div class="rv">
         <h2 class="display h2">Найдите нужную запчасть</h2>
-        <p class="note">Структура демонстрационная и будет уточнена по реальному ассортименту.</p>
+        <p class="note">Выберите категорию или воспользуйтесь поиском.</p>
       </div>
       <div class="search rv" style="--d:.1s">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg>
@@ -602,7 +633,7 @@ html.js .rv.in{opacity:1;transform:none}
     </div>
 
     <div class="noresult" id="noresult">
-      <div><strong>По запросу ничего не найдено.</strong><br><span class="note" style="margin:0">Это не значит, что детали нет. Отправьте запрос, менеджер уточнит.</span></div>
+      <div><strong>По вашему запросу ничего не найдено.</strong><br><span class="note" style="margin:0">Это не значит, что детали нет: отправьте запрос, и менеджер уточнит наличие.</span></div>
       <a href="#request" class="btn btn-dark" data-fillpart>Отправить запрос на подбор</a>
     </div>
 
@@ -614,6 +645,44 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </section>
 
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <h2 class="display h2">Ремонт спецтехники и грузовиков</h2>
+        <p class="note">Помимо запчастей, мы оказываем услуги по ремонту китайской спецтехники и грузовых автомобилей.</p>
+      </div>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv">
+        <img src="assets/img/engine.jpg" alt="Двигатель грузового автомобиля" loading="lazy" width="1400" height="933">
+        <div class="svc-body">
+          <h3>Ремонт двигателей</h3>
+          <p>Ремонт двигателей спецтехники и грузовых автомобилей.</p>
+          <a class="go" href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8F." target="_blank" rel="noopener">Уточнить в WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="svc rv" style="--d:.08s">
+        <img src="assets/img/suspension.jpg" alt="Ходовая часть и подвеска грузового автомобиля" loading="lazy" width="1400" height="931">
+        <div class="svc-body">
+          <h3>Ремонт ходовой части</h3>
+          <p>Ремонт ходовой части спецтехники и грузовиков.</p>
+          <a class="go" href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D1%85%D0%BE%D0%B4%D0%BE%D0%B2%D0%BE%D0%B9%20%D1%87%D0%B0%D1%81%D1%82%D0%B8." target="_blank" rel="noopener">Уточнить в WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="svc svc-accent rv" style="--d:.16s">
+        <svg class="svc-ic" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M44 8a14 14 0 0 0-13 19L10 48a6 6 0 0 0 8 8l21-21a14 14 0 0 0 19-13l-9 9-8-2-2-8z"/></svg>
+        <div class="svc-body">
+          <h3>Ремонт любой сложности</h3>
+          <p>Беремся за ремонт любой сложности: от небольших неисправностей до серьёзных поломок.</p>
+          <a class="go" href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D1%81%D0%BF%D0%B5%D1%86%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8." target="_blank" rel="noopener">Обсудить ремонт <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- REQUEST -->
 <section class="request sec" id="request">
   <div class="wrap req-grid">
@@ -621,8 +690,8 @@ html.js .rv.in{opacity:1;transform:none}
       <h2 class="h2 display rv">Не нашли нужную деталь? Поможем с подбором</h2>
       <p class="rv" style="--d:.08s">Отправьте название детали, артикул или информацию об автомобиле — менеджер сможет уточнить запрос.</p>
       <ul class="req-list rv" style="--d:.14s">
-        <li><b>ВХОД</b><span>Марка и модель, название детали или артикул</span></li>
-        <li><b>ВЫХОД</b><span>Менеджер уточняет детали и связывается с вами</span></li>
+        <li><b>ЗАПРОС</b><span>Марка и модель, название детали или артикул</span></li>
+        <li><b>ОТВЕТ</b><span>Менеджер уточняет детали и связывается с вами</span></li>
         <li><b>СВЯЗЬ</b><span>WhatsApp или звонок, как вам удобнее</span></li>
       </ul>
     </div>
@@ -659,7 +728,7 @@ html.js .rv.in{opacity:1;transform:none}
           <input class="inp" id="contact" name="contact" type="tel" placeholder="+7 ___ ___ __ __" autocomplete="off" required>
           <span class="msg">Введите номер телефона полностью</span></div>
         <div class="agree-wrap" id="f-agree">
-          <label class="consent"><input type="checkbox" id="agree"><span>Согласие на обработку персональных данных. Текст согласия будет добавлен на этапе разработки.</span></label>
+          <label class="consent"><input type="checkbox" id="agree"><span>Я даю согласие на обработку моих персональных данных.</span></label>
           <span class="msg">Подтвердите согласие, чтобы отправить заявку</span>
         </div>
         <div class="hp" aria-hidden="true"><label>Сайт<input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></label></div>
@@ -696,7 +765,7 @@ html.js .rv.in{opacity:1;transform:none}
     <div class="adv-grid">
       <figure class="adv-ph rv">
         <img src="assets/img/advantages-rear.jpg" alt="Самосвал SHACMAN, вид сзади" loading="lazy" width="1400" height="933">
-        <figcaption>Фото: Retired electrician, Wikimedia Commons, CC0. Временное изображение</figcaption>
+        
       </figure>
       <ul class="adv">
         <li class="rv">
@@ -724,8 +793,8 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="sec" id="about" style="background:var(--graphite)">
   <div class="wrap about-grid">
     <div class="about-copy">
-      <h2 class="display h2 rv">Запчасти для грузовиков и понятный разговор с клиентом</h2>
-      <p class="rv" style="--d:.08s">SHACMAN PARTS — направление компании ТОО «ErDos Trans Service». Компания работает с 2017 года в сфере запчастей для китайской спецтехники и грузовых автомобилей и оказывает услуги по их ремонту. Мы выстраиваем работу вокруг запроса клиента: помогаем уточнить деталь и быстро выйти на связь с менеджером.</p>
+      <h2 class="display h2 rv">Запчасти и ремонт для китайской спецтехники</h2>
+      <p class="rv" style="--d:.08s">SHACMAN PARTS — направление компании ТОО «ErDos Trans Service». С 2017 года мы работаем в сфере запчастей для китайской спецтехники и грузовых автомобилей и оказываем услуги по их ремонту. Мы строим работу вокруг запроса клиента: помогаем уточнить нужную деталь и быстро связаться с менеджером.</p>
       <div class="company rv" style="--d:.12s">
         <img class="wm-logo" src="assets/img/logo.jpg" alt="" width="48" height="48">
         <div><b>ТОО «ErDos Trans Service»</b><span>Юридическое лицо · бренд SHACMAN PARTS</span></div>
@@ -746,13 +815,13 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="final">
   <div class="wrap final-in">
     <div class="rv">
-      <h2 class="display">Нужна запчасть для грузового автомобиля?</h2>
-      <p>Расскажите, что требуется, и мы поможем уточнить подходящую деталь.</p>
+      <h2 class="display">Нужна запчасть или ремонт?</h2>
+      <p>Расскажите, что нужно: поможем подобрать деталь или обсудим ремонт.</p>
     </div>
     <div class="acts rv" style="--d:.1s">
       <a class="btn btn-white" href="#request">Оставить заявку
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-out-w" href="#contacts">Связаться с нами</a>
+      <a class="btn btn-out-w" href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">Связаться с нами</a>
     </div>
   </div>
 </section>
@@ -768,12 +837,13 @@ html.js .rv.in{opacity:1;transform:none}
           <span><b>Shacman</b> <i>Parts</i></span>
         </a>
         <p class="about-s">ТОО «ErDos Trans Service». Запчасти для китайской спецтехники и услуги по ремонту. Работаем с 2017 года.</p>
-        <div class="soc"><span>WhatsApp: [будет добавлен]</span><span>Соцсети: [будут добавлены]</span></div>
+        <div class="soc"><a href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/zapchast_chacman/" target="_blank" rel="noopener">Instagram @zapchast_chacman</a></div>
       </div>
       <div>
         <h4>Разделы</h4>
         <ul>
           <li><a href="#catalog">Каталог</a></li>
+          <li><a href="#services">Услуги по ремонту</a></li>
           <li><a href="#advantages">Преимущества</a></li>
           <li><a href="#about">О компании</a></li>
           <li><a href="#request">Оставить заявку</a></li>
@@ -782,11 +852,11 @@ html.js .rv.in{opacity:1;transform:none}
       <div>
         <h4>Контакты</h4>
         <ul class="ct">
-          <li><span>Телефон</span><span class="ph">[номер телефона]</span></li>
-          <li><span>WhatsApp</span><span class="ph">[номер WhatsApp]</span></li>
-          <li><span>Эл. почта</span><span class="ph">[адрес почты]</span></li>
-          <li><span>Адрес</span><span class="ph">[адрес компании]</span></li>
-          <li><span>Режим</span><span class="ph">[часы работы]</span></li>
+          <li><span>Телефон</span><a href="tel:+77756674020">+7 775 667 40 20</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">+7 775 667 40 20</a></li>
+          <li><span>Instagram</span><a href="https://www.instagram.com/zapchast_chacman/" target="_blank" rel="noopener">@zapchast_chacman</a></li>
+          <li><span>Адрес</span><span class="cv">г. Атырау, ул. Сырым Каженбаев, 7а</span></li>
+          <li><span>Режим</span><span class="cv">Ежедневно, 09:00–04:00</span></li>
         </ul>
       </div>
     </div>
@@ -800,7 +870,7 @@ html.js .rv.in{opacity:1;transform:none}
 
 <div class="mbar" id="mbar">
   <a class="btn btn-red" href="#request">Оставить заявку</a>
-  <a class="btn btn-line" href="#contacts">Связаться</a>
+  <a class="btn btn-line" href="https://wa.me/77756674020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">Связаться</a>
 </div>
 
 <aside class="tweaks" id="tweaks" aria-label="Tweaks">
