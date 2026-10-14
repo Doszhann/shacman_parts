@@ -164,14 +164,11 @@ T = {
  'г. Атырау, ул. Сырым Каженбаев, 7а': ('Атырау қ., Сырым Қаженбаев көшесі, 7а', 'Atyrau, Syrym Kazhenbayev St., 7a'),
  'Режим': ('Жұмыс режимі', 'Hours'),
  'Ежедневно, 09:00–04:00': ('Күн сайын, 09:00–04:00', 'Daily, 09:00–04:00'),
- 'Фотографии временные, источник Wikimedia Commons. Самосвал сзади: Retired electrician, CC0. Двигатель MAN D2676, подвеска Büssing и коробка передач Hyundai: Spielvogel, CC0. Колёсный узел BPW: Spielvogel, CC BY-SA 4.0. Названия и изображения техники других производителей использованы только как иллюстрация деталей и не означают партнёрства.': (
-    'Фотосуреттер уақытша, дереккөзі: Wikimedia Commons. Артынан түсірілген самосвал: Retired electrician, CC0. MAN D2676 қозғалтқышы, Büssing аспасы және Hyundai беріліс қорабы: Spielvogel, CC0. BPW доңғалақ торабы: Spielvogel, CC BY-SA 4.0. Басқа өндірушілердің техникасының атаулары мен суреттері тек бөлшектерді көрсету үшін қолданылған және серіктестікті білдірмейді.',
-    'Photos are temporary, source: Wikimedia Commons. Dump truck rear view: Retired electrician, CC0. MAN D2676 engine, Büssing suspension and Hyundai gearbox: Spielvogel, CC0. BPW wheel end: Spielvogel, CC BY-SA 4.0. Names and images of other manufacturers\' equipment are used only to illustrate parts and do not imply partnership.'),
  '© 2026 ТОО «ErDos Trans Service». Все права защищены.': (
     '© 2026 ЖШС «ErDos Trans Service». Барлық құқықтар қорғалған.',
     '© 2026 ErDos Trans Service LLP. All rights reserved.'),
- 'Макет · Stage 1 · контент и изображения временные': ('Макет · Stage 1 · мазмұн мен суреттер уақытша', 'Mockup · Stage 1 · content and images are temporary'),
  'Связаться': ('Байланысу', 'Contact'),
+ 'Фото колёсного узла:': ('Доңғалақ торабының фотосы:', 'Wheel end photo:'),
  'Акцентный цвет': ('Акцент түсі', 'Accent colour'),
  'Обработка фото': ('Фотоны өңдеу', 'Photo treatment'),
  'Цвет': ('Түс', 'Colour'),
